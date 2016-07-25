@@ -402,9 +402,18 @@ colors.map(function(t) { return t.toHexString(); }); // [ "#ff0000", "#80ff00", 
 tinycolor("#f00").complement().toHexString(); // "#00ffff"
 ```
 ## Color Utilities
+### equals
+
+`equals: function(color1 (string|object), color2 (string|object) ) -> bool`.
 ```js
-tinycolor.equals(color1, color2)
-tinycolor.mix(color1, color2, amount = 50)
+tinycolor.equals(color1, color2); // true
+```
+### mix
+create a new color which is [amount]% from color1 to color2. 0=color1, 100=color2
+
+`mix: function(color1, color2, amount = 50) -> TinyColor`.
+```js
+tinycolor.mix(color1, color2, amount = 50); //color1.5
 ```
 ### random
 
