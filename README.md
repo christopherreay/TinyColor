@@ -470,7 +470,7 @@ See [index.html](https://github.com/bgrins/TinyColor/blob/master/index.html) in 
 Instantiate a new TinyColor object with the same color.  Any changes to the new one won't affect the old one.
 ```js
 var color1 = tinycolor("#F00");
-var color2 = color1.clone();
+var color2 = tinycolor(color1.toString("rgb"));
 color2.setAlpha(.5);
 
 color1.toString(); // "#ff0000"
